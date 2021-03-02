@@ -41,13 +41,13 @@ Api that downloads data from official NBA.com website to provide user with advan
 
 
 ## URL	                    HTTP Verb	       Action
-/teams                      Get                Get list of all teams
-/players                    Get                Get list of all players
-/teams/id                   Get                Get favorited team name
-/players/id                 Get                Get favorited players
-/teams/id/community         Get                Get community of team
-/teams/id/community/        Post               Post comment to community page
-/teams/id/community/        DELETE             Delete comment from team page
+* /teams                      Get                Get list of all teams
+* /players                    Get                Get list of all players
+* /teams/id                   Get                Get favorited team name
+* /players/id                 Get                Get favorited players
+* /teams/id/community         Get                Get community of team
+* /teams/id/community/        Post               Post comment to community page
+* /teams/id/community/        DELETE             Delete comment from team page
 
 
 
