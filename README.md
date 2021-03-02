@@ -22,6 +22,7 @@
 * As a user, I want to join team community in order to discuss last nights game. 
 * As a user, I want to see if other fanatics agree with my analysis/comments.
 * As a user, I want to see how my team has played over the last 10 games.
+* As a user, I want to see my profile in order to adjust favorite teams and players. 
 
 ## Database ERDs
 ![ERD's](/images/ERD.PNG)
@@ -50,7 +51,8 @@ Api that downloads data from official NBA.com website to provide user with advan
 * /teams/id/community   |||      Get         |||       Get community of team
 * /teams/id/community/  |||      Post        |||       Post comment to community page
 * /teams/id/community/  |||      DELETE      |||       Delete comment from team page
-
+* /users/login          |||      
+* /users/signup         ||| 
 
 
 

@@ -1,0 +1,16 @@
+body{
+   margin: 0px;
+}
+
+
+nav {
+   display: flex;
+   justify-content: flex-end;
+   height: 50px;
+   background-color: red;
+}
+
+nav a {
+   text-decoration: none;
+   padding: 5px;
+}
