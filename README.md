@@ -1,14 +1,9 @@
 # NBATeamChat
 
 
+## Come to the NBATeam Chat app in order to discuss you teams recent performance with other fans of you team. Join any team in the league's fanbase and immerse yourself in the conversation. 
 
 
-Your pitch readme should have the following:
-a Description of the app
-mvp goals
-stretch goals
-user stories
-explanation of the APIs you plan to use
 daily sprints
 wireframes
 database ERDs
@@ -30,6 +25,7 @@ A concise list of feature goals you will need to attain to have a Minimum Viable
 * Add point system to comments, if comment reaches 100 points upload comment to twitter page. 
 
 
+
 ## User Stories
 * As a user, I want to be able to create an account in order to save favorite team and join community. 
 * As a user, I want to join team community in order to discuss last nights game. 
@@ -37,5 +33,22 @@ A concise list of feature goals you will need to attain to have a Minimum Viable
 * As a user, I want to see how my team has played over the last 10 games.
 
 
+## balldontlie.io 
+NBA related API that provides a wide variety of nba information from current team and players to historical NBA data. 
 
-S
+## NBA Stats
+Api that downloads data from official NBA.com website to provide user with advanced stats for individual players. 
+
+
+## URL	                    HTTP Verb	       Action
+/teams                      Get                Get list of all teams
+/players                    Get                Get list of all players
+/teams/id                   Get                Get favorited team name
+/players/id                 Get                Get favorited players
+/teams/id/community         Get                Get community of team
+/teams/id/community/        Post               Post comment to community page
+/teams/id/community/        DELETE             Delete comment from team page
+
+
+
+
