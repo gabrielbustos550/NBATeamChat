@@ -24,13 +24,12 @@ router.post('/signup', async (req, res) => {
             email: req.body.email,
             password: req.body.password
         })
-        res.redirect('/profile')
+        res.redirect('/user/profile')
 
     } catch (err) {
         console.log(err)
     }
 })
-
 
 
 router.get('/profile', (req, res) => {

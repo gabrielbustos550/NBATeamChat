@@ -20,6 +20,7 @@ app.use(express.static('public'))
 
 /* Controller */
 app.use('/user', require('./controllers/userControllers'))
+app.use('/teams', require('./controllers/teamControllers'))
 
 
 
