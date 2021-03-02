@@ -4,10 +4,6 @@
 ## Come to the NBATeam Chat app in order to discuss you teams recent performance with other fans of you team. Join any team in the league's fanbase and immerse yourself in the conversation. 
 
 
-daily sprints
-wireframes
-
-
 ## MVP Goals
 1. Create a homepage that allows you to create an account
 2. Once account is created, user can save favorite teams and players to their profile.
@@ -29,6 +25,11 @@ wireframes
 
 ## Database ERDs
 ![ERD's](/images/ERD.PNG)
+
+## Wireframes
+![Homepage](/images/homepage.JPG)
+![Team Page](/images/team_page.JPG)
+
 
 
 ## balldontlie.io 
