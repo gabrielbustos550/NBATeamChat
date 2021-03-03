@@ -9,12 +9,22 @@
 
     <body>
         <nav>
-            <a href='/'>Homepage</a>
-            <a href='/user/profile'>Profile</a>
-            <a href='/user/login'>Log In</a>
-            <a href='/'>Logout</a>
-            <a href='/teams'>Teams</a>
+            <% if (user) {%>
+                <a href='/user/logout'>Logout</a>
+                <a href='/user/profile'>Profile</a>
+
+            <% } else{ %>
+                <a href='/'>Homepage</a>
+                <a href='/user/login'>Log In</a>
+                <a href='/teams'>Teams</a>
+            <% } %>   
         </nav>
+
+
+        <% if (user) {%>
+                <h4> Hello, <%= user.email %>!</h4>
+        <% } %>  
+
         <div id='container'>
         <%- body%>
         </div>

@@ -17,12 +17,11 @@ router.post('/login', async (req, res) => {
         res.cookie('userId', user.id)
         res.redirect('/user/profile')
 
+    } else {
+        res.render('user/login')
     }
 
-    
-
 })
-
 
 
 router.get('/signup', (req, res) => {
@@ -53,7 +52,14 @@ router.get('/profile', (req, res) => {
     res.render('user/profile')
 })
 
-
+router.get('/logout', (req, res) => {
+    try{
+    res.clearCookie('userId')
+    res.redirect('/')
+    } catch (err) {
+        console.log(err)
+    }
+})
 
 
 
