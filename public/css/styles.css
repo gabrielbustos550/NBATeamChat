@@ -14,3 +14,43 @@ nav a {
    text-decoration: none;
    padding: 5px;
 }
+
+#container {
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   border-style: solid;
+   height: 100vh;
+   width: 95vw;
+}
+
+#wConference {
+   border-style: solid;
+   width: 50%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   text-align: center;
+}
+#eConference {
+   border-style: solid;
+   width: 50%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   text-align: center;
+}
+
+#west {
+   border-style: solid;
+   width: 50%;
+   height: 110px;
+}
+
+#east {
+   border-style: solid;
+   width: 50%;
+   height: 110px;
+}

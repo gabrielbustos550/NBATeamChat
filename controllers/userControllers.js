@@ -9,6 +9,22 @@ router.get('/login', (req, res) => {
     }
 })
 
+router.post('/login', async (req, res) => {
+    const user = await db.user.findOne({
+        where: { email: req.body.email }
+    })
+    if(user.password === req.body.password){
+        res.cookie('userId', user.id)
+        res.redirect('/user/profile')
+
+    }
+
+    
+
+})
+
+
+
 router.get('/signup', (req, res) => {
     try{
         res.render('user/signup')
@@ -24,6 +40,7 @@ router.post('/signup', async (req, res) => {
             email: req.body.email,
             password: req.body.password
         })
+        res.cookie('userId', newUser.id)
         res.redirect('/user/profile')
 
     } catch (err) {

@@ -1,11 +1,25 @@
-<h2> Hello from teams</h2>
 
 
+
+
+<div id='wConference'>
 <% teams.forEach(team=> { %>
-    
-    <div>
+    <% if(team.conference === 'West'){ %>
+    <div id='west'>
         <h3><%= team.full_name %> </h3>
-        <h3><%= team.conference %> </h3>
-        <h3><%= team.division %> </h3>
+    
     </div>
+     <% } %>      
 <% }) %>
+</div>
+
+<div id='eConference'>
+<% teams.forEach(team=> { %>
+    <% if(team.conference === 'East'){%>
+        <div id='east'>
+            <h3><%= team.full_name %> </h3>
+          
+        </div>
+    <% } %>      
+<% }) %> 
+</div>
