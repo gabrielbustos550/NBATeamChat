@@ -7,6 +7,11 @@
     <% if(team.conference === 'West'){ %>
     <div id='west'>
         <h3><%= team.full_name %> </h3>
+        <form method="POST" action='/teams'>
+            <input type='submit' value="⭐️">
+            <input type='hidden' name="name" value="<%= team.full_name %> ">
+        </form>
+    
     
     </div>
      <% } %>      

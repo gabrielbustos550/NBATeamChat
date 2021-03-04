@@ -1,0 +1,3 @@
+sequelize model:generate --name=users_teams --attributes userId:integer,teamId:integer
+
+sequelize model:generate --name=users_players --attributes playerId:integer,userId:integer

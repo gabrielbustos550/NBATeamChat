@@ -1,4 +1,5 @@
 const axios = require('axios')
+const db = require('../models')
 const router = require('express').Router()
 
 
@@ -18,7 +19,20 @@ router.get('/', async (req, res) => {
     }
 
 })
+router.post('/', async (req, res) => {
+    try{
+        const [newTeam, created] = await db.team.findOrCreate({ 
+            where: {
+                name: req.body.name
+            }
+        })
+        res.locals.user.addTeam(newTeam);
+        res.redirect('user/profile')
 
+    } catch (err) {
+        console.log(err)
+    }
+})
 
 
 

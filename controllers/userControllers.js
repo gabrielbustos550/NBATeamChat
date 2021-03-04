@@ -75,9 +75,34 @@ router.post('/signup', async (req, res) => {
 })
 
 
-router.get('/profile', (req, res) => {
-    res.render('user/profile')
+router.get('/profile', async (req, res) => {
+    if(!res.locals.user) {
+        res.redirect('/user/login')
+    } else {
+        try {
+            const user = await db.user.findOne({
+                where: { id: res.locals.user.id }, 
+                include: db.team
+            })
+            const teams = user.dataValues.teams
+            const names = []
+            teams.forEach(team => {
+                let info = {
+                    name: team.dataValues.name,
+                    id: team.dataValues.id
+                }
+                names.push(info)
+
+            })
+            console.log(names)
+            res.render('user/profile', {teams: names } )
+            
+        }catch (err) {
+            console.log(err)
+        }
+    }
 })
+
 
 router.get('/logout', (req, res) => {
     try{
