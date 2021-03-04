@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const rowdy = require('rowdy-logger')
 const axios = require('axios')
@@ -5,6 +6,8 @@ const morgan = require('morgan')
 const ejsLayouts = require('express-ejs-layouts')
 const cookieParser = require('cookie-parser')
 const models = require('./models')
+const cryptojs = require('crypto-js')
+
 
 
 const app = express()
@@ -22,8 +25,16 @@ app.use(cookieParser())
 
 
 app.use(async (req, res, next) => {
-    const user = await models.user.findByPk(req.cookies.userId) 
-    res.locals.user = user
+    if (req.cookies.userId) {
+        const decryptedUserId = cryptojs.AES.decrypt(req.cookies.userId, process.env.COOKIE_SECRET)
+        const decryptedUserIdString = decryptedUserId.toString(cryptojs.enc.Utf8)
+
+
+        const user = await models.user.findByPk(decryptedUserIdString) 
+        res.locals.user = user
+    } else {
+        res.locals.user = null
+    }
 
     next()
 })
