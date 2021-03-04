@@ -1,0 +1,14 @@
+<h2>Hello, from players</h2>
+
+
+<% players.forEach(player=> { %>
+    <div>
+        <h4><%= player.first_name %> <%= player.last_name %> </h4>
+        <h4>Position: <%= player.position %> </h4>
+        <h4>Team: <%= player.team.full_name %> </h4>
+    </div>
+
+
+
+
+<%}) %>

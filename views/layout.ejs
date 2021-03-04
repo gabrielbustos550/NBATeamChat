@@ -10,10 +10,13 @@
     <body>
         <nav>
             <% if (user) {%>
-                <a href='/user/logout'>Logout</a>
+                <a href='/'>Homepage</a>
                 <a href='/user/profile'>Profile</a>
-
-            <% } else{ %>
+                <a href='/teams'>Teams</a>
+                <a href='/players'>Player Index</a>
+                <a href='/user/logout'>Logout</a>
+                
+                <% } else{ %>
                 <a href='/'>Homepage</a>
                 <a href='/user/login'>Log In</a>
                 <a href='/teams'>Teams</a>

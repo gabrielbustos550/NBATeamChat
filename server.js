@@ -46,6 +46,7 @@ app.get('/', async (req, res) => {
 /* Controllers */
 app.use('/user', require('./controllers/userControllers'))
 app.use('/teams', require('./controllers/teamControllers'))
+app.use('/players', require('./controllers/playerControllers'))
 
 
 
