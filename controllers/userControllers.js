@@ -94,7 +94,7 @@ router.get('/profile', async (req, res) => {
                 names.push(info)
 
             })
-            console.log(names)
+           
             res.render('user/profile', {teams: names } )
             
         }catch (err) {
