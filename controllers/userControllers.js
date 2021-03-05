@@ -94,8 +94,21 @@ router.get('/profile', async (req, res) => {
                 names.push(info)
 
             })
+            const playerUser = await db.user.findOne({
+                where: { id: res.locals.user.id },
+                include: db.player
+            })
+            const players = playerUser.dataValues.players
+            const playerNames = []
+            players.forEach(player => {
+                let data = {
+                    name: player.dataValues.name,
+                    id: player.dataValues.id 
+                }
+                playerNames.push(data)
+            })
            
-            res.render('user/profile', {teams: names } )
+            res.render('user/profile', {teams: names, players: playerNames } )
             
         }catch (err) {
             console.log(err)
