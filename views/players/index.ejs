@@ -7,8 +7,12 @@
         <h4>Position: <%= player.position %> </h4>
         <h4><%= player.team.full_name %> </h4>
         <% if(user) { %>
-            <form method="POST" action='/players'
-        
+            <form method="POST" action='/players'>
+                <input type='submit' value="⭐️">
+                <input type='hidden' name="name" value= "<%= player.first_name %> <%= player.last_name %>" >
+
+            </form>
+
         
         <% } %>
     </div>
