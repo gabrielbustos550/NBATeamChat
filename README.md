@@ -51,8 +51,7 @@ Api that downloads data from official NBA.com website to provide user with advan
 * /teams/id/community   |||      Get         |||       Get community of team
 * /teams/id/community/  |||      Post        |||       Post comment to community page
 * /teams/id/community/  |||      DELETE      |||       Delete comment from team page
-* /users/login          |||      
-* /users/signup         ||| 
+
 
 
 
