@@ -5,6 +5,7 @@
     <p>Date: <%= game.date %> </p>
     <p>Home Team: <%= game.home_team.full_name %> <%= game.home_team_score %></p>
     <p>Away Team: <%= game.visitor_team.full_name %> <%= game.visitor_team_score %> </p>
+    <a href="/teams/<%= teamId %>/games/<%= game.id %>">Post Match Thread</a>
 
 
 <% }) %>

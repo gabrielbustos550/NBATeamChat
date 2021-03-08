@@ -3,6 +3,8 @@
     <head>
         <title>NBA TeamChat</title>
         <link rel='stylesheet' href="/css/styles.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 
     </head>
 
@@ -18,15 +20,10 @@
                 
                 <% } else{ %>
                 <a href='/'>Homepage</a>
-                <a href='/user/login'>Log In</a>
                 <a href='/teams'>Teams</a>
+                <a href='/user/login'>Log In</a>
             <% } %>   
         </nav>
-
-
-        <% if (user) {%>
-                <h4> Hello, <%= user.email %>!</h4>
-        <% } %>  
 
         <div id='container'>
         <%- body%>

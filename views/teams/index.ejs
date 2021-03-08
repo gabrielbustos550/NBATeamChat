@@ -6,7 +6,7 @@
 <% teams.forEach(team=> { %>
     <% if(team.conference === 'West'){ %>
     <div id='west'>
-        <a href="/teams/<%= team.id %>"><%= team.full_name %></a>
+        <a href="/teams/<%= team.id %>/games"><%= team.full_name %></a>
         <% if(user) {%> 
             <form method="POST" action='/teams'>
                 <input type='submit' value="⭐️">
@@ -24,7 +24,7 @@
 <% teams.forEach(team=> { %>
     <% if(team.conference === 'East'){%>
         <div id='east'>
-            <a href="/teams/<%= team.id %>"><%= team.full_name %></a>
+            <a href="/teams/<%= team.id %>/games"><%= team.full_name %></a>
             <% if(user) {%> 
                 <form method="POST" action='/teams'>
                     <input type='submit' value="⭐️">

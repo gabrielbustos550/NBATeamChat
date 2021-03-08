@@ -35,14 +35,14 @@ router.post('/', async (req, res) => {
 })
 
 
-router.get('/:id', async (req, res) => {
+router.get('/:id/games', async (req, res) => {
     try{ 
         const gamesUrl =`https://balldontlie.io/api/v1/games?seasons[]=2020&seasons[]=2021&team_ids[]=${req.params.id}`
         const response = await axios.get(gamesUrl)
         const games = response.data.data
-        console.log(games)
+        
 
-        res.render('teams/homepage', {games: games})
+        res.render('teams/homepage', {games: games, teamId: req.params.id})
 
     } catch(err) {
         console.log(err)
@@ -50,7 +50,19 @@ router.get('/:id', async (req, res) => {
     }
 
 })
+router.get('/:teamId/games/:gameId', async (req, res) => {
+    try{
+        const gameUrl = `https://balldontlie.io/api/v1/games/${req.params.gameId}`
+        const response = await axios.get(gameUrl)
+        const game = response.data
+        console.log(game)
+        
 
+        res.render('teams/game')
+    }catch (err) {
+        console.log(err)
+    }
+})
 
 
 
