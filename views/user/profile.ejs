@@ -1,10 +1,15 @@
-<h2>Hello from user profile</h2>
+<% if (user) {%>
+    <h2> Hello, <%= user.email %>!</h4>
+<% } %>  
 
+
+<h3>View Favorite Teams and Players Below</h3>
 
 
 
 <% teams.forEach(team => { %>
     <p><%= team.name %> </p>
+    <a href="/teams/<%= team.id %>/games">Schedule</a>
 
 <% }) %>
 

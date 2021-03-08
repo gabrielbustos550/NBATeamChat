@@ -7,3 +7,8 @@ sequelize model:generate --name=users_players --attributes playerId:integer,user
  <% if (user) {%>
                 <h4> Hello, <%= user.email %>!</h4>
         <% } %>  
+
+
+        <form method="GET" method="/teams/:teamId/games/page2">
+    
+    <input type="submit" value="Next Page">

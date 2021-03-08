@@ -63,6 +63,19 @@ router.get('/:teamId/games/:gameId', async (req, res) => {
         console.log(err)
     }
 })
+router.get('/:teamId/games/page2', async (req, res) => {
+    try {
+        const gamesUrl =`https://balldontlie.io/api/v1/games?seasons[]=2020&seasons[]=2021&team_ids[]=${req.params.id}&page=2`
+        const response = await axios.get(gamesUrl)
+        const games = response.data.data
+        
+
+        res.render('teams/homepage', {games: games, teamId: req.params.id})
+
+    } catch(err){
+        console.log(err)
+    }
+})
 
 
 

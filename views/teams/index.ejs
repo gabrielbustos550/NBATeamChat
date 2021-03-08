@@ -9,7 +9,7 @@
         <a href="/teams/<%= team.id %>/games"><%= team.full_name %></a>
         <% if(user) {%> 
             <form method="POST" action='/teams'>
-                <input type='submit' value="⭐️" id="emoji">
+                <input type='submit' value="⭐️ Add to Favorites" id="emoji">
                 <input type='hidden' name="name" value="<%= team.full_name %> ">
             </form>
         <% } %>
@@ -27,7 +27,7 @@
             <a href="/teams/<%= team.id %>/games"><%= team.full_name %></a>
             <% if(user) {%> 
                 <form method="POST" action='/teams'>
-                    <input type='submit' value="⭐️" id="emoji">
+                    <input type='submit' value="⭐️ Add to Favorites" id="emoji">
                     <input type='hidden' name="name" value="<%= team.full_name %> ">
                     
             

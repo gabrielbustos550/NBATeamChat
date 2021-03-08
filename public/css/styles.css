@@ -113,13 +113,15 @@ nav a {
 #wConference a{
    text-decoration: none;
    color: white;
-   font-size: 1.2em;
+   font-size: 1.1em;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 #eConference a {
    text-decoration: none;
    color: white;
-   font-size: 1.2em;
+   font-size: 1.1em;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 #emoji {
@@ -132,7 +134,36 @@ nav a {
 }
 
 
-
 #players {
    text-align: center;
+   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   font-size: .8em;
+   border-style: solid;
+   margin-right: 5px;
+   margin-bottom: 5px;
+   margin-top: 10px;
 }
+
+#header {
+   background-color: white;
+}
+
+#scheduleContainer {
+   margin-top: 20px;
+   display: flex;
+   flex-wrap: wrap;
+   font-size: 1em;
+}
+
+#eachGame {
+   border-style: solid;
+   width: 145px;
+   margin-right: 5px;
+   margin-bottom: 5px;
+
+}
+
+#pmt a{
+   text-decoration: none;
+}
+
